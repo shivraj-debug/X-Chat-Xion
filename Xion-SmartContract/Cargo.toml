@@ -1,0 +1,48 @@
+[package]
+name = "xchat"
+version = "0.1.0"
+edition = "2021"
+
+exclude = [
+  # Those files are rust-optimizer artifacts. You might want to commit them for convenience but they should not be part of the source code publication.
+  "artifacts/*",
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+codegen-units = 1
+debug = false
+debug-assertions = false
+incremental = false
+lto = true
+opt-level = 3
+overflow-checks = true
+panic = 'abort'
+rpath = false
+
+[features]
+# for more explicit tests, cargo test --features=backtraces
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+
+
+[dependencies]
+cosmwasm-schema = "1.5.11"
+cosmwasm-std = "1.5.11"
+cosmwasm-storage = "1.5.2"
+cw-storage-plus = "1.2.0"
+cw2 = "1.1.2"
+schemars = "0.8.22"
+serde = { version = "1.0.219", default-features = false, features = ["derive"] }
+thiserror = "1.0.69"
+
+
+
+[dev-dependencies]
+cw-multi-test = "0.17.0"
