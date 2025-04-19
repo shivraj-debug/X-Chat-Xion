@@ -2,7 +2,7 @@
 
 X-Chat is a decentralized AI chat application built on the XION blockchain. Users can interact with an intelligent AI assistant using credits stored on-chain. Credits are deducted per message, and users can purchase plans, manage conversations, and securely log in with their XION wallet.
 
-Try it at: [https://x-chat2.vercel.app](https://x-chat2.vercel.app)
+Try it at: [https://x-chat-henna.vercel.app](https://x-chat-henna.vercel.app)
 
 ### for starting this X-chat app
 ### use commands
@@ -61,5 +61,5 @@ X-Chat requires a compatible wallet:
 
 ## Support
 If you have questions or need help:
-- Email us at shivrajstm2002@gmail.com
+- Email me at shivrajstm2002@gmail.com
 
